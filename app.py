@@ -11,8 +11,12 @@ if not os.path.isfile(model_name):
     import wget
     wget.download(file_url, model_name)
 
-# Load the model
-model = joblib.load(model_name)
+# Load the model with error handling
+try:
+    model = joblib.load(model_name)
+except Exception as e:
+    st.error(f"Error loading model: {e}")
+    st.stop()
 
 def prediction(Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area):
     if Gender == "Male":
