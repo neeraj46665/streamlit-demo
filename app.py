@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 model_name = 'RF_Loan_model.joblib'
-file_url = "https://raw.githubusercontent.com/manifoldailearning/Complete-MLOps-BootCamp/main/Build-ML-App-Streamlit/RF_Loan_model.joblib"
+file_url = "https://github.com/neeraj46665/streamlit-demo/blob/main/RF_Loan_model.joblib"
 
 # Download the model if it does not exist
 if not os.path.isfile(model_name):
